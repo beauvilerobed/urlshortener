@@ -123,29 +123,27 @@ retrieves specific data from database in json format
   
 ## Notes:
 
-- By default port SET to 5000 in `/shorten/index.js`. If altered, must change port in `/shorten/Dockerfile.js`, `/shorten/docker-compose.js`, and `/shorten/config/default.json` to the same exact thing.
+- By default port SET to 5000 in `/shortener/index.js`. If altered, must change port in `/shortener/Dockerfile.js`, `/shortener/docker-compose.js`, and `/shortener/config/default.json` to the same exact thing.
 
 
 
-# Docker Node MongoDB
+# docker-compose Quick start
 
 ### Run in Docker
 ```bash
+cd shortener
 docker-compose up
 # use -d flag to run in background
 ```
 
 ### Tear down
 ```bash
+cd shortener
 docker-compose down
-```
-
-### To be able to edit files, add volume to compose file
-```bash
-volumes: ['./:/usr/src/app']
 ```
 
 ### To re-build
 ```bash
+cd shortener
 docker-compose build
 ```
