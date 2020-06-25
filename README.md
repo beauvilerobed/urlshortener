@@ -1,8 +1,6 @@
 # TINY URL
-
 RESTApi which returns a shorten url and retrieves shortened urls mongodb database.
 
----
 ## Requirements
 
 For development, you will only need Node.js and a node global package installed in your environement.
@@ -38,7 +36,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ## Install
 
     $ git clone https://github.com/beauvilerobed/urlshortener.git
-    $ cd urlsshortener
+    $ cd urlshortener
     $ npm install
 
 ## Running the project
