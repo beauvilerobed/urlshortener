@@ -1,0 +1,6 @@
+POST http://localhost:5000/api/url/shorten
+Content-Type: application/json
+
+{
+    "longUrl": "https://www.amazon.com/Razor-RSF350-Electric-Street-Bike/dp/B06Y5YS8SJ?pf_rd_r=9XTCA29KG0AVPFB5RQWE&pf_rd_p=bfc5ed24-623b-4700-a713-517fc940a1e4"
+}

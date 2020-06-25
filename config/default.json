@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://robedbeauvile:vpX7Z62BRIKpKhsr@cluster0-5tyok.mongodb.net/shortlinks?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
+}
