@@ -1,11 +1,11 @@
 # TINY URL
 
-A nice project with a nice description
+RESTApi which returns a shorten url and retrieves shortened urls mongodb database.
 
 ---
 ## Requirements
 
-For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
+For development, you will only need Node.js and a node global package installed in your environement.
 
 ### Node
 - #### Node installation on Windows
@@ -26,70 +26,128 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 If the installation was successful, you should be able to run the following command.
 
     $ node --version
-    v8.11.3
+    v12.16.3
 
     $ npm --version
-    6.1.0
+    6.14.4
 
 If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
 
     $ npm install npm -g
 
-###
-### Yarn installation
-  After installing node, this project will need yarn too, so just run the following command.
-
-      $ npm install -g yarn
-
----
-
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
-    $ yarn install
-
-## Configure app
-
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
-
-- A setting;
-- Another setting;
-- One more setting;
+    $ git clone https://github.com/beauvilerobed/urlshortener.git
+    $ cd urlsshortener
+    $ npm install
 
 ## Running the project
 
-    $ yarn start
+    $ npm start
 
-## Simple build for production
+# Quick start to url shortener API
+# 1.
+### URL
 
-    $ yarn build
+  `/api/url/shorten`
+
+### Method:
+ 
+ `POST`
+
+### Data:
+
+     `{
+        contentType: "application/json;charset=utf-8",
+        data: longUrl
+      }`
+       
+## Success Response:
+
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+
+    {
+      "_id": id,
+      "longUrl": longUrl,
+      "shortUrl": baseUrl/urlCode,
+      "urlCode": urlCode,
+      "date": date_o_fPOST,
+      "__v": 0
+    }
+ 
+## Error Response:
+
+  `401 UNAUTHORIZED 
+   { error : "Invalid long url" }`
+   
+# 2.
+### URL
+
+  `/:code`
+
+### Method:
+ 
+ `GET`
+
+## Required:
+
+redirect to long or original URL
+
+    code=[urlCode]
+ 
+# 3.
+### URL
+
+  `/api/url/shorturls`
+
+### Method:
+ 
+ `GET`
+
+retrieves database in json format
+
+# 4.
+### URL
+
+  `/api/url/shorturls/:id`
+
+### Method:
+ 
+ `GET`
+
+## Required:
+
+retrieves specific data from database in json format
+
+    id=[_id]
+  
+## Notes:
+
+- By default port SET to 5000 in `/shorten/index.js`. If altered, must change port in `/shorten/Dockerfile.js`, `/shorten/docker-compose.js`, and `/shorten/config/default.json` to the same exact thing.
+
 
 
 # Docker Node MongoDB
 
-Simple example of a dockerized Node/Mongo app
-
-## Quick Start
-
-
-# Run in Docker
+### Run in Docker
 ```bash
 docker-compose up
 # use -d flag to run in background
 ```
 
-# Tear down
+### Tear down
 ```bash
 docker-compose down
 ```
 
-# To be able to edit files, add volume to compose file
+### To be able to edit files, add volume to compose file
 ```bash
 volumes: ['./:/usr/src/app']
 ```
 
-# To re-build
+### To re-build
 ```bash
 docker-compose build
 ```
