@@ -43,6 +43,11 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
     $ npm start
 
+## Running / Development
+
+* retrieve a database to get started
+* Visit your app at [http://localhost:5000/api/shorturls](http://localhost:5000/api/shorturls).
+
 # Quick start to url shortener API
 # 1.
 ### URL
