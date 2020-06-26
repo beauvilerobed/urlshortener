@@ -128,7 +128,7 @@ retrieves specific data from database in json format
   
 ## Notes:
 
-- By default port SET to 5000 in `/urlshortener/index.js`. If altered, must change port in `/urlshortener/Dockerfile.js`, `/urlshortener/docker-compose.js`, and `/shortener/config/default.json` to the same exact thing.
+- By default port SET to 5000 in `/urlshortener/index.js`. If altered, must change port in `/urlshortener/Dockerfile.js`, `/urlshortener/docker-compose.js`, and `/urlshortener/config/default.json` to the same exact thing.
 
 
 
@@ -143,12 +143,10 @@ docker-compose up
 
 ### Tear down
 ```bash
-cd urlshortener
 docker-compose down
 ```
 
 ### To re-build
 ```bash
-cd urlshortener
 docker-compose build
 ```
