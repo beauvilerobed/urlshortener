@@ -78,6 +78,27 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
       "date": date_o_fPOST,
       "__v": 0
     }
+    
+ ## Example
+ 
+ POST http://localhost:5000/api/shorten
+Content-Type: application/json
+
+{
+   "longUrl": "https://github.com/beauvilerobed/urlshortener"
+}
+
+## Response
+
+
+{
+    "_id": "5ef78dc62b27d207a8bd3b42",
+    "longUrl": "https://github.com/beauvilerobed/urlshortener",
+    "shortUrl": "http://localhost:5000/kLYGS2Yo9",
+    "urlCode": "kLYGS2Yo9",
+    "date": "Sat Jun 27 2020 11:19:50 GMT-0700 (Pacific Daylight Time)",
+    "__v": 0
+}
  
 ## Error Response:
 
@@ -88,7 +109,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ### URL
 
   `/:code`
-
+  
 ### Method:
  
  `GET`
@@ -98,6 +119,14 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 redirect to long or original URL
 
     code=[urlCode]
+    
+ ## Example
+ 
+ GET http://localhost:5000/kLYGS2Yo9
+
+## Response
+
+You should be redirected to original website.
  
 # 3.
 ### URL
@@ -110,6 +139,14 @@ redirect to long or original URL
 
 retrieves database in json format
 
+ ## Example
+ 
+ GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42
+
+## Response
+
+You should get a json file.
+
 # 4.
 ### URL
 
@@ -118,12 +155,25 @@ retrieves database in json format
 ### Method:
  
  `GET`
-
+ 
 ## Required:
 
 retrieves specific data from database in json format
 
     id=[_id]
+
+ ## Example
+ 
+ GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42
+
+## Response
+
+{
+    "id":"5ef78dc62b27d207a8bd3b42",
+    "longUrl":"https://github.com/beauvilerobed/urlshortener",
+    "shortUrl":"http://localhost:5000/kLYGS2Yo9"
+}
+
   
 ## Notes:
 
