@@ -45,10 +45,11 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Running / Development
 
-* retrieve a database to get started
-* Visit your app at [http://localhost:5000/api/shorturls](http://localhost:5000/api/shorturls).
+* Let's first do a GET request to get everything started
 
-# Quick start to url shortener API
+### Visit your app at [http://localhost:5000/api/shorturls](http://localhost:5000/api/shorturls).
+
+# To start url shortener API
 # 1.
 ### URL
 
@@ -84,21 +85,21 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
  POST http://localhost:5000/api/shorten
 Content-Type: application/json
 
-{
+`{
    "longUrl": "https://github.com/beauvilerobed/urlshortener"
-}
+}`
 
 ## Response
 
 
-{
+`{
     "_id": "5ef78dc62b27d207a8bd3b42",
     "longUrl": "https://github.com/beauvilerobed/urlshortener",
     "shortUrl": "http://localhost:5000/kLYGS2Yo9",
     "urlCode": "kLYGS2Yo9",
     "date": "Sat Jun 27 2020 11:19:50 GMT-0700 (Pacific Daylight Time)",
     "__v": 0
-}
+}`
  
 ## Error Response:
 
@@ -122,7 +123,7 @@ redirect to long or original URL
     
  ## Example
  
- GET http://localhost:5000/kLYGS2Yo9
+ `GET http://localhost:5000/kLYGS2Yo9`
 
 ## Response
 
@@ -141,7 +142,7 @@ retrieves database in json format
 
  ## Example
  
- GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42
+ `GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42`
 
 ## Response
 
@@ -164,15 +165,15 @@ retrieves specific data from database in json format
 
  ## Example
  
- GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42
+ `GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42`
 
 ## Response
 
-{
+`{
     "id":"5ef78dc62b27d207a8bd3b42",
     "longUrl":"https://github.com/beauvilerobed/urlshortener",
     "shortUrl":"http://localhost:5000/kLYGS2Yo9"
-}
+}`
 
   
 ## Notes:
