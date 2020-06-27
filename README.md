@@ -61,8 +61,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ### Data:
 
      `{
-        contentType: "application/json;charset=utf-8",
-        data: longUrl
+        "longUrl": "youlongUrl"
       }`
        
 ## Success Response:
