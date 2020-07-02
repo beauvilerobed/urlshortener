@@ -142,7 +142,7 @@ retrieves database in json format
 
  ## Example
  
- `GET http://localhost:5000/api/url/shorturls/5ef78dc62b27d207a8bd3b42`
+ `GET http://localhost:5000/api/url/shorturls`
 
 ## Response
 
