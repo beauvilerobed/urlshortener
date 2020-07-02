@@ -132,7 +132,7 @@ You should be redirected to original website.
 # 3.
 ### URL
 
-  `/api/url/shorturls`
+  `/api/shorturls`
 
 ### Method:
  
@@ -142,11 +142,11 @@ retrieves database in json format
 
  ## Example
  
- `GET http://localhost:5000/api/url/shorturls`
+ `GET http://localhost:5000/api/shorturls`
 
 ## Response
 
-You should get a json file.
+You should get a database as a json file.
 
 # 4.
 ### URL
