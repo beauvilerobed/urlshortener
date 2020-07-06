@@ -1,14 +1,10 @@
-// setup a basic server
 const express = require('express');
 const connectDB = require('./config/db');
 const Url = require('./model/Url')
-// CORS policy
 const cors = require('cors');
 
 const app = express();
 
-
-// Connect to database
 connectDB();
 
 app.use(cors());
@@ -26,7 +22,6 @@ app.use('/api/url', require('./routes/url'));
 app.use('/api', require('./routes/shorturls'));
 
 
-// set PORT
 const PORT = 5000;
  
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
