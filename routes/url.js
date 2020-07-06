@@ -39,7 +39,7 @@ router.post('/shorten', async (req, res) => {
                     date: new Date()
                 });
 
-                //OCI, need to save, returns promise
+                //need to save, returns promise
                 await url.save();
 
                 res.json(url);
